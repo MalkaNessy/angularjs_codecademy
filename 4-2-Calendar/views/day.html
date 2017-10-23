@@ -1,0 +1,12 @@
+<!-- Format a date so it displays in the format "Friday 1/16" -->
+<h2 class="date"> {{allevents.date |  date:'EEEE, d,M' }} </h2>
+<h3>{{allevents.some}} </h3>
+<!--ng-repeat="event in allevents"-->
+
+<div class="event" ng-repeat="e in allevents.events">
+  <a href="#/{{$index}}">
+    <h3 class="name">{{e.name}}  </h3>
+    <p><span class="from">{{e.from | date}}  </span> - <span class="to">{{e.to | date}} </span></p>
+  </a>
+</div>
+
